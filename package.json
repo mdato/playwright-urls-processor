@@ -1,0 +1,20 @@
+{
+  "name": "playwright-url",
+  "version": "1.0.0",
+  "description": "",
+  "main": "api/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node api/server.js",
+    "dev": "node api/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "playwright": "^1.45.3"
+  }
+}

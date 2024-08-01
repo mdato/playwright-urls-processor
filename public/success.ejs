@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Proceso Completado</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #4caf50;
+            margin-bottom: 20px;
+        }
+        .summary {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .success {
+            color: #4caf50;
+            font-weight: bold;
+        }
+        .failed {
+            color: #f44336;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .failed ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+            display: inline-block;
+        }
+        .failed li {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 10px;
+            margin: 5px 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .failed li:nth-child(even) {
+            background: #f1f1f1;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Proceso Completado</h1>
+        <p class="summary <%= successCount > 0 ? 'success' : 'failed' %>">
+            <%= successCount %> URL<%= successCount !== 1 ? 's' : '' %> procesada<%= successCount !== 1 ? 's' : '' %> con éxito.
+        </p>
+        <%- failedSection %>
+        <p><a href="/">Volver al inicio</a></p>
+    </div>
+</body>
+</html>
